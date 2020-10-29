@@ -4,9 +4,14 @@ import {View} from 'react-native';
 import {InputBox, MainButton} from '../components';
 import {LoginStyles} from '../theme';
 
+import { useGlobalState } from '../state/global';
+
 export default LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState(() => '');
   const [password, setPassword] = useState(() => '');
+
+  const {state: {theme}}  = useGlobalState();
+  console.log('Global Theme @ Login Component ::', theme);
 
   const performLogin = async () => {
     // implement login validation for User/Password
@@ -16,6 +21,9 @@ export default LoginScreen = ({navigation}) => {
     // perform a nagivation for now
     navigation.navigate('Home');
   }
+
+  console.log('Login Style Board :: ', LoginStyles.board);
+  console.log('Login Style Button :: ', LoginStyles.buttons);
 
   return (
     <View>
