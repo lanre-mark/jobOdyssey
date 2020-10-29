@@ -11,7 +11,7 @@ export const initialGlobalState = {
 
 const globalReducer = (state, action) => {
   switch (action.type) {
-    case 'changeGlobalTheme':
+    case 'changeAppGlobalTheme':
       let globalTheme;
       let themeScheme;
       Platform.OS === 'ios' && StatusBar.setBarStyle(state.themeName + '-content', true)

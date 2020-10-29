@@ -20,7 +20,7 @@ export default HomeScreen = ({navigation}) => {
       <FAB
         style={HomeStyles.board}
         small
-        // icon="plus"
+        icon="plus"
         // onPress={() => navigation.navigate('')} // possibly add jobs by user
       />
     </View>
